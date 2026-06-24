@@ -46,6 +46,7 @@ unless you explicitly need them.
     Added check for filter parameter
 
 """
+
 import ast
 
 import bandit
@@ -106,7 +107,7 @@ def is_filter_data(context):
 def tarfile_unsafe_members(context):
     if all(
         [
-            context.is_module_imported_exact("tarfile"),
+            context.is_module_imported_like("tarfile"),
             "extractall" in context.call_function_name,
         ]
     ):
