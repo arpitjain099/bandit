@@ -46,7 +46,6 @@ unless you explicitly need them.
     Added check for filter parameter
 
 """
-
 import ast
 
 import bandit
